@@ -1,4 +1,5 @@
-import asyncio,sys,nest_asyncio 
+import asyncio,sys
+# import nest_asyncio 
 import streamlit as st
 from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
@@ -16,7 +17,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 if sys.platform.startswith("win"):
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
     
-nest_asyncio.apply()
+# nest_asyncio.apply()
 
 system_prompt = """
 You are an AI assistant tasked with providing detailed answers based solely on the given context.
