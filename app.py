@@ -234,6 +234,9 @@ async def run():
             st.write_stream(llm_response)
             
         else:
+             qresults = collection.query(query_texts=[prompt], n_results=10)
+             context = qresults.get("documents")[0]
+            
              llm_response = call_llm(context=context, prompt=prompt, with_context=is_web_search)
              st.write_stream(llm_response)
     
